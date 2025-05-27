@@ -4,7 +4,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
 
-    public AudioSource audioSource; // Fonte de música
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -15,13 +15,13 @@ public class MusicManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persiste entre cenas
+            DontDestroyOnLoad(gameObject); 
         }
     }
 
     public void PlayMusic(AudioClip clip, bool loop = true)
     {
-        if (audioSource.clip == clip) return; // Já está tocando essa música? Não faz nada.
+        if (audioSource.clip == clip) return; 
 
         audioSource.Stop();
         audioSource.clip = clip;

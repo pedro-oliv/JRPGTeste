@@ -4,8 +4,7 @@ public class SoundEffectManager : MonoBehaviour
 {
     public static SoundEffectManager Instance;
 
-    public AudioSource audioSource; // Fonte de som
-    public AudioClip[] clips;       // Lista de efeitos (opcional)
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -16,7 +15,7 @@ public class SoundEffectManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persiste entre cenas
+            DontDestroyOnLoad(gameObject);
         }
     }
 

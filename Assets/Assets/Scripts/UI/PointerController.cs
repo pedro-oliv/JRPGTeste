@@ -50,7 +50,7 @@ public class PointerController : MonoBehaviour
     }
 
     private float lastSoundTime = -1f;
-    private const float minSoundInterval = 0.05f; // 50ms
+    private const float minSoundInterval = 0.05f; 
 
     public void PlaySelectSound()
     {
